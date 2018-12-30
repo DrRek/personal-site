@@ -23,5 +23,9 @@ $('document').ready(function(){
 	        scrollTop: $("#contact").offset().top
 	    }, 800);
 	});
-	
+
+	//Chiudere la navbar menu a schermo piccolo dopo un click
+	$('a.nav-link').on('click', function(){
+	    $('.navbar-toggler').click(); //bootstrap 4.x
+	});
 });

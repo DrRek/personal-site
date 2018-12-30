@@ -60,3 +60,50 @@ p.description b{
 .progetto .right{
 	text-align:right;
 }
+
+/*Skill distanziate*/
+div.row.skill div{
+	margin-bottom: 20px;
+}
+
+/*Contatti distanziati*/
+p.description a{
+	margin-bottom: 10px;
+}
+
+/*Modifiche per rendere responsive la prima parte, quella della foto*/
+.page-header .content-center{
+  	margin-top: 50px;
+  }
+
+@media screen and (max-height : 600px)
+{
+  .presentation-title
+  {
+    font-size: 4em;
+  }
+  
+  .page-header .content-center{
+  	margin-top: 30px;
+  }
+}
+
+@media screen and (max-height : 540px)
+{
+  .presentation-title
+  {
+    font-size: 2em;
+  }
+  
+  .page-header .content-center{
+  	margin-top: 0px;
+  }
+}
+
+@media screen and (max-width : 545px)
+{
+  .copyright
+  {
+    font-size: 0.7em !important;
+  }
+}
