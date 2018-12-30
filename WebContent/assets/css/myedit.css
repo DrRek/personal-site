@@ -1,0 +1,62 @@
+p.description b{
+	 color:white;
+}
+
+.button{
+	cursor: pointer;
+}
+
+/*Align top icon with text*/
+.navbar.fixed-top .nav-link i { 
+	top: 0px !important;	
+}
+
+.btn-github{
+	background-color: #24292e !important;
+	border-color: #24292e !important;
+}
+
+.btn-ig{
+	background-color: #3f729b !important;
+	border-color: #3f729b !important;
+}
+
+.btn-stacko{
+	background-color: #F48024 !important;
+	border-color: #F48024 !important;
+}
+
+.btn-linkedi{
+	background-color: #006097 !important;
+	border-color: #006097 !important;
+}
+
+.btn-edited:hover{
+	opacity:0.8;
+}
+
+.proj-title, .proj-title h3{
+	margin-top:0px !important;
+}
+
+.proj-title{
+	margin-bottom: 15px !important;
+}
+
+.proj-date{
+	font-size: 0.9em;
+	color: #808080;
+}
+
+.proj-img{
+	margin-top:30px;
+}
+
+.proj-desc{
+ 	text-align: justify;
+  	text-justify: inter-word;
+}
+
+.progetto .right{
+	text-align:right;
+}
