@@ -57,8 +57,12 @@ p.description b{
   	text-justify: inter-word;
 }
 
-.progetto .right{
-	text-align:right;
+.progetto img.left{
+	margin-right: 40px !important;
+}
+
+.progetto img.right{
+	margin-left: 40px !important;
 }
 
 /*Skill distanziate*/
