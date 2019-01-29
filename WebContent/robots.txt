@@ -1,1 +1,4 @@
-Sitemap: http://lucareccia.it/sitemap.xml
+User-agent: *
+Disallow: /assets/
+
+Sitemap: http://www.lucareccia.it/sitemap.xml
