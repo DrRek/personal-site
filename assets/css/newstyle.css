@@ -1,0 +1,55 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.foot {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.buttons-list {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 0 10px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border-color: #bdbdbd;
+    border-width: 1px;
+    border-style: solid;
+    font-weight: 400;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+h5 {
+    margin-bottom: 0;
+}
+
+hr {
+    width: 80%;
+    border-color: #bdbdbd;
+}
