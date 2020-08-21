@@ -24,6 +24,7 @@ html, body {
     justify-content: center;
     padding-bottom: 5px;
     text-align: center;
+    margin-top: 30px;
 }
 
 .buttons-list {
@@ -46,10 +47,88 @@ h1 {
 }
 
 h5 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.color {
+    color: #ffa726;
+}
+
+.proj-container:first-child {
+    margin-top: 0;
+}
+
+.proj-container {
+    display: flex;
+    margin: 20px 10px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.proj-img {
+    width: 200px;
+    height: 160px;
+    background-position: center;
+    background-size: cover;
+}
+
+.proj-info {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 10px;
+    color: rgb(102, 97, 91);
+}
+
+.proj-readmore {
+    color: #51bcda;
+}
+
+.proj-desc {
+    font-size: 16px;
 }
 
 hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
     width: 80%;
     border-color: #bdbdbd;
 }
+
+hr.small-hr {
+	margin-top: 3px;
+	margin-bottom: 3px;
+	border-color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+
+    .proj-container {
+        flex-direction: column;
+    }
+
+    .proj-img {
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    /*.proj-list {
+        margin: 0 10px;
+        border: 1px #e0e0e0 solid;
+    }
+
+    .proj-info {
+        width: 100%;
+    }
+
+    .proj-container:first-child {
+        margin-top: 10px;
+    }*/
+  }
