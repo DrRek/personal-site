@@ -1,6 +1,4 @@
 html, body {
-    height: 100%;
-    width: 100%;
     text-align: center;
 }
 
@@ -25,6 +23,7 @@ html, body {
     padding-bottom: 5px;
     text-align: center;
     margin-top: 30px;
+    font-size: 16px;
 }
 
 .buttons-list {
@@ -93,6 +92,7 @@ h4 {
 
 .proj-desc {
     font-size: 16px;
+    text-align: justify;
 }
 
 hr {
@@ -108,8 +108,7 @@ hr.small-hr {
 	border-color: #e0e0e0;
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 650px) {
     .proj-container {
         flex-direction: column;
     }
@@ -118,17 +117,10 @@ hr.small-hr {
         align-self: center;
         margin-bottom: 10px;
     }
+}
 
-    /*.proj-list {
-        margin: 0 10px;
-        border: 1px #e0e0e0 solid;
-    }
-
+@media (max-width: 450px) {
     .proj-info {
-        width: 100%;
+        width: auto;
     }
-
-    .proj-container:first-child {
-        margin-top: 10px;
-    }*/
-  }
+}
