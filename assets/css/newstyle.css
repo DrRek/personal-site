@@ -1,5 +1,5 @@
 html, body {
-    font-family: Roboto, sans-serif;
+    font-family: Montserrat, sans-serif;
     text-align: center;
 }
 
@@ -9,6 +9,11 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+a.no-a,  a.no-a:hover, a.no-a:active, a.no-a:focus, a.no-a:focus-within, a.no-a:visited{
+    text-decoration: inherit;
+    color: inherit;
 }
 
 .page {
@@ -61,7 +66,7 @@ h4 {
 
 .proj-list {
     display: flex;
-    max-width: 700px;
+    max-width: 900px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -70,6 +75,10 @@ h4 {
     width: 280px;
     text-align: left;
     margin: 10px;
+}
+
+.proj-container:hover {
+    cursor: pointer;
 }
 
 .proj-title {

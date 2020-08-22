@@ -1,0 +1,79 @@
+html, body {
+    font-family: Montserrat, sans-serif;
+    background-color: #f5f5f5;
+    color: #66615b;
+}
+
+.page {
+    margin: 60px auto;
+    max-width: 700px;
+    background-color: white;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+iframe, img.main-img {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 480px;
+    height: 299px;
+}
+
+.color {
+    color: #ffa726;
+}
+
+.goback, .goback:hover, .goback:active, .goback:focus, .goback:focus-within, .goback:visited {
+    position: absolute;
+    left: 10px;
+    opacity: .8;
+    font-size: 15px;
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.goback i {
+    margin-right: 5px;
+}
+
+.goback1 {
+    top: 10px;
+}
+
+.goback2 {
+    bottom: 10px;
+}
+
+.foot {
+    width: 100%;
+    text-align: center;
+    color: #66615b;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 700px) {
+    .page {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    html, body {
+        background-color: white;
+    }
+
+    .goback {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 500px) {
+    iframe, img.main-img {
+        width: 302px;
+        height: 199px;
+    }
+}
