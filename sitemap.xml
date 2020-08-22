@@ -1,4 +1,8 @@
 <urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
-<url><loc>http://www.lucareccia.it/projects.html</loc><lastmod>2019-01-23</lastmod></url>
-<url><loc>http://www.lucareccia.it/</loc><lastmod>2019-01-23</lastmod></url>
+<url><loc>http://www.lucareccia.it/projects/fuelsort.html</loc><lastmod>2020-08-22</lastmod></url>
+<url><loc>http://www.lucareccia.it/projects/ltl-to-buchi.html</loc><lastmod>2020-08-22</lastmod></url>
+<url><loc>http://www.lucareccia.it/projects/sec-public-enc-scheme.html</loc><lastmod>2020-08-22</lastmod></url>
+<url><loc>http://www.lucareccia.it/projects/shor.html</loc><lastmod>2020-08-22</lastmod></url>
+<url><loc>http://www.lucareccia.it/projects/smart-gri-ethereum.html</loc><lastmod>2020-08-22</lastmod></url>
+<url><loc>http://www.lucareccia.it/</loc><lastmod>2020-08-22</lastmod></url>
 </urlset>
