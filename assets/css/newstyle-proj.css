@@ -16,6 +16,10 @@ html, body {
     border-radius: 5px;
 }
 
+h3 {
+    margin-top: 30px;
+}
+
 iframe, img.main-img {
     margin-top: 40px;
     margin-bottom: 50px;
@@ -25,6 +29,11 @@ iframe, img.main-img {
 
 .color {
     color: #ffa726;
+}
+
+.left {
+    text-align: left;
+    align-self: flex-start;
 }
 
 .goback, .goback:hover, .goback:active, .goback:focus, .goback:focus-within, .goback:visited {
@@ -56,6 +65,41 @@ iframe, img.main-img {
     margin-bottom: 5px;
 }
 
+.codesection {
+    width: 100%;
+    background-color: #f0f0f0;
+    margin-bottom: 30px;
+}
+.codesection pre {
+    margin-bottom: 0;
+}
+
+.codesection div {
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.codesection .button {
+    cursor: pointer;
+}
+
+.codesection .code {
+    display: none;
+}
+
+table {
+    font-size: 12px;
+}
+.under-table {
+    font-size: 9px;
+}
+
+table, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
 @media (max-width: 700px) {
     .page {
         margin: 0;
@@ -75,5 +119,9 @@ iframe, img.main-img {
     iframe, img.main-img {
         width: 302px;
         height: 199px;
+    }
+
+    table {
+        font-size: 10px;
     }
 }
