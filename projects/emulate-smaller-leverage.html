@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="../assets/img/icona.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/icona.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Navigating Leverage Strategically | Luca Reccia</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+  <!-- Bootstrap core CSS     -->
+  <link href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/paper-kit.css?v=2.1.0" rel="stylesheet" />
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <!--     Fonts and icons     -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!--  Personal CSS -->
+  <link href="../assets/css/newstyle-proj.css" rel="stylesheet" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42580333-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-42580333-2');
+  </script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+
+<body>
+  <div class="page">
+    <a class="goback goback1" href="/">
+      <span><i class="fa fa-arrow-left"></i> go back <span class="color">Home</span></span>
+    </a>
+    <a class="goback goback2" href="/">
+      <span><i class="fa fa-arrow-left"></i> go back <span class="color">Home</span></span>
+    </a>
+    <h1>Unlocking Your Investment Potential: Navigating Leverage Strategically - Part 1</h1>
+    <p>
+      Ever dreamt of fine-tuning your investment strategy to fit your risk appetite like a perfectly tailored suit?
+      Imagine the power to choose your leverage, not dictated by your broker, but aligned with your financial comfort
+      zone. Welcome to the intriguing world of programmatically picking your own leverage - where financial autonomy
+      meets calculated risk.
+    </p>
+    <p>
+      Delving into the realm of leverage can be both exhilarating and nerve-wracking. Consider this: a leverage of 1:30
+      amplifies your investment, making a $2,000 position equivalent to a $60,000 play. Exciting, right? But hold on - a
+      mere 1/30 drop in the asset's price, and poof! Your entire investment evaporates as the broker intervenes with a
+      stop out.
+    </p>
+    <p>
+      Now, let's tailor this to your liking. A 1:2 leverage allows for a sweet spot - a balance between maximizing
+      earnings and minimizing the risk of a stop out. A price drop of just 1/2 could spell trouble, but it's a risk
+      worth taking in your quest for optimized returns.
+    </p>
+    <p>
+      Here's the kicker: not all brokers offer the flexibility to handpick your leverage. Fret not, as I share the
+      workaround that empowers you to seize control of your financial destiny. Let's dive into the first installment of
+      unraveling the secrets behind <b>programmatically picking your own leverage</b>.
+    </p>
+    <h2>Being able to pick your own leverage without having to deal witht the broker</h2>
+    <h3>The Problem</h3>
+    <p>
+      Imagine this: you're excited to invest $1,000, but your broker says, "Hold on! You can only do it with a 1:30
+      leverage." Now, using leverage sounds good, but 1:30 feels like too much risk for comfort.
+    </p>
+    <p>
+      You want something more balanced, not too risky. Going for a 1:1 ratio is too plain; you still want the perks of
+      leverage but in a safer way. The tricky part? Asking your broker to change the settings is like navigating a maze
+      blindfolded - super frustrating!
+    </p>
+    <p>
+      But fear not! We're on a mission to free you from this hassle. In the next part, discover a clever trick to choose
+      your leverage without dealing with broker headaches.
+    </p>
+    <h3>Simplifying the problem</h3>
+    <p>
+      Let's break down the complexities and simplify our approach in this first part of the solution. We'll work under a
+      set of assumptions to streamline the process:
+    </p>
+    <ol>
+      <li>We're focusing solely on opening long positions.</li>
+      <li>We're keeping it straightforward by opening only one position at a time.</li>
+      <li>We're investing our entire account balance in each position - no fractions here.</li>
+      <li>If our equity dips below the required margin, the broker promptly triggers a stop out.</li>
+      <li>New leverages must be greater than 0 but not exceed the initial leverage provided by the broker.</li>
+    </ol>
+    <p>
+      Now, let's address some simplifications.
+      The first two conditions, a bit tricky to eliminate, might get their own spotlight in a future second part.
+      The third condition, regarding splitting our balance, is a bit too basic to dive into here, can be achieved quite
+      easily and maybe I will dive into it in the future.
+      The fourth condition is broker-imposed - we're assuming the broker won't play nice and allow us to risk their
+      margin without consequences. We want to stick to the worst-case scenario for a solid mathematical methodology.
+      Lastly, the fifth condition aligns with the logic of math - no negative leverage, and you can't snag a bigger
+      leverage without the broker's lending hand.
+    </p>
+    <h3>The solution</h3>
+    <h4>First step: Neutralizing Broker Leverage with Math</h4>
+    <p>
+      Let's dive into a practical example to demystify the process. Imagine an account with a balance of $30,000 and a
+      formidable 1:30 leverage. The goal? Invest the entire balance, but without dancing with any leverage risk.
+    </p>
+    <p>
+      If we attempted to open a position using the full balance, the broker would swing a position of $900,000
+    </p>
+    <pre>(balance
+      * leverage = $30,000 * 30)</pre>
+    <p>Effectively, this would be like borrowing 29/30 of the trade amount from the broker. A
+      price drop of just 1/30 or 3.33%, and bam! The broker shuts us down, and we kiss our entire investment goodbye.
+    </p>
+    <p>
+      Now, let's outsmart this. Opening a position at 1/30 of our balance, which is $1,000 in this example, magically
+      balances the equation. The broker opens a position of $30,000 </p>
+    <pre>[(balance/30) * leverage = ($30,000/30) * 30]</pre>
+    <p>
+      investing our whole balance. The unused portion, aka free margin, stands at precisely 29/30 of our initial
+      investment. <b>With enough free margin, even if the price dips below 1/30, the broker refrains from pulling the
+        plug,
+        giving us a chance to weather the storm until prices goes up again.</b> Note: A stop out signal will only
+      trigger if
+      the price somehow hits zero (which is an unlikely scenario unless your symbol reaches rocks bottom - a stop out
+      would then be the least of your worries).
+    </p>
+    <p>
+      Let's simplify further. Given a balance of <i><b>x</b></i> and a leverage of <i><b>1:y</b></i>, open a position
+      using <i><b>x/y</b></i> of your
+      capital. In MQL5 language, it's as straightforward as
+    </p>
+    <pre>(AccountInfoDouble(ACCOUNT_EQUITY) /
+        AccountInfoInteger(ACCOUNT_LEVERAGE))</pre>
+    <p>
+      This strategy grants us the power to invest with a <i><b>1:1</b></i> leverage,
+      regardless of the broker's predefined leverage settings.
+    </p>
+    <h4>Second step: Unleashing Custom Leverage</h4>
+    <p>
+      Now that we've mastered the art of investing without leverage (<i><b>1:1</b></i>), let's explore the realm of
+      custom leverage -
+      a sweet spot between amplified returns and controlled risk, free from the shackles of the broker's default
+      settings.
+    </p>
+    <p>
+      Building upon our earlier example, suppose we yearn for a leverage of <i><b>1:2</b></i>. In simple terms, we want
+      to invest
+      double our balance, with the broker chipping in the missing half. Sounds easy, right? But remember, if the price
+      drops by 1/2, we're back in the danger zone of losing it all.
+    </p>
+    <p>
+      Applying the logic, if we previously opened a position using <i><b>1/30</b></i> of our balance, doubling the
+      initial capital
+      spent opens the door to a <i><b>1:2</b></i> leverage. In numbers,
+    </p>
+    <pre>[(balance * new leverage / old leverage) * old leverage = (30k * 2 / 30) * 30 = 30k * 2 = 60k]</pre>
+    <p> Now, aiming for <i><b>2/30</b></i> of the balance as the required margin, we maintain <i><b>28/30</b></i> as
+      free margin, while the remaining <i><b>30k</b></i> completes the <i><b>60k</b></i> position, courtesy of the
+      broker.
+    </p>
+    <p>
+      Let's generalize the approach further. Given a balance <i><b>x</b></i>, original broker leverage
+      <i><b>1:y</b></i>, and a desired new leverage of <i><b>1:z</b></i> (where <i><b>0&lt;z&lt;=y</b></i>), open a
+      position using <i><b>(x/y)*z</b></i> of your capital. In MQL5 language, it becomes
+      <pre>(AccountInfoDouble(ACCOUNT_EQUITY) / AccountInfoInteger(ACCOUNT_LEVERAGE)) * newLeverage</pre>
+    </p>
+    <p>
+      What makes this approach fascinating is its flexibility. <b>You can open positions even with fractional leverages - imagine
+      a leverage of 1.5, risking a stop out only if prices plummet by 66.66%</b>. The possibilities are diverse, offering
+      you a nuanced control over your investments.
+    </p>
+    <h2>Conclusion: Unveiling More in Part 2</h2>
+    <p>
+      Bravo! You've dipped your toes into the world of custom leverage, transforming the once complex into a manageable
+      strategy. But hold on, there's more in store for our financial adventurers.
+    </p>
+    <p>
+      Join me in part 2 as we unravel the simplifying aspects of this groundbreaking solution. Our goal? Extending this
+      approach to multiple positions within the same account, even dabbling in the territory of short positions. The
+      journey continues, and the financial landscape is ripe for exploration!
+    </p>
+    <p>
+      Until then, happy investing!
+    </p>
+
+  </div>
+  <div class="foot">
+    <span>
+      Contact me at <a href="mailto:lucareccia@hotmail.it">lucareccia@hotmail.it</a><br>
+    </span>
+  </div>
+
+  <script>
+    function toggleCode(caller) {
+      const code = caller.parentElement.parentElement.childNodes[3];
+      if (code.style.display === "inherit") {
+        caller.innerHTML = "[Show Code]";
+        code.style.display = "none";
+      } else {
+        caller.innerHTML = "[Hide Code]";
+        code.style.display = "inherit";
+      }
+    }
+  </script>
+</body>
+
+</html>
